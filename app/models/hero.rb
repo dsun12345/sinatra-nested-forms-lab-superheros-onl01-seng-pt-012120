@@ -1,6 +1,6 @@
 class Hero
 
-  attr_accessor :name, :power, :biography
+  attr_accessor :name, :power, :bio
   
   Heroes = []
   
@@ -8,7 +8,7 @@ class Hero
   def initialize(params)
     @name = params[:name]
     @power = params[:power]
-    @biography = params[:biography]
+    @biography = params[:bio]
     Heroes << self 
   end 
 
