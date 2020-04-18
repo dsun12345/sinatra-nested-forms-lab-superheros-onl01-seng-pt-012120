@@ -4,9 +4,9 @@ class Team
   
   Teams = []
   
-  def initialize(attri)
-    @name = attri[:name]
-    @motto = attri[:motto]
+  def initialize(params)
+    @name = params[:name]
+    @motto = params[:motto]
     Teams << self 
   end 
   
