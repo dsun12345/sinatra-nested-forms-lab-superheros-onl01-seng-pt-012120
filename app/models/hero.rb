@@ -1,24 +1,16 @@
-class Hero 
+class Hero
+  attr_accessor :name, :power, :bio
 
-  attr_accessor :name, :power, :biography
-  
-  Heroes = []
-  
-  
-  def initialize(att)
-    @name = att[:name]
-    @power = att[:power]
-    @biography = att[:biography]
-    Heroes << self 
-  end 
+  @@all = []
 
-  def self.all 
-    Heroes
-  end 
-  
-  def self.clear 
-    Heroes.clear
-  end 
+  def initialize(details)
+    @name = details[:name]
+    @power = details[:power]
+    @bio = details[:bio]
+    @@all << self
+  end
 
-  
-end 
+  def self.all
+    @@all
+  end
+end
